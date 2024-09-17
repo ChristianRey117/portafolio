@@ -8,6 +8,7 @@ import { WebPageInfoPageRoutingModule } from './web-page-info-routing.module';
 
 import { WebPageInfoPage } from './web-page-info.page';
 import { CardComponent } from 'src/app/components/card/card.component';
+import { WebSiteIdModule } from 'src/app/components/web-site-id/web-site-id.module';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { CardComponent } from 'src/app/components/card/card.component';
     IonicModule,
     WebPageInfoPageRoutingModule,
     CardComponent,
+    WebSiteIdModule,
   ],
   declarations: [WebPageInfoPage],
 })
