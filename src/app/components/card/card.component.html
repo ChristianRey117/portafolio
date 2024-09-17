@@ -1,4 +1,4 @@
-<ion-card>
+<ion-card (click)="goToWebSite(cardWebSite.id)">
   <img alt="Silhouette of mountains" [src]="cardWebSite.image" />
   <ion-card-header>
     <ion-card-title>{{ cardWebSite.title }}</ion-card-title>

@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { ICardWebSite } from 'src/app/interfaces/card-interface/card.interface';
 
@@ -13,7 +14,11 @@ import { ICardWebSite } from 'src/app/interfaces/card-interface/card.interface';
 })
 export class CardComponent implements OnInit {
   @Input() cardWebSite: ICardWebSite;
-  constructor() {}
+  constructor(private readonly _router: Router) {}
 
   ngOnInit() {}
+
+  goToWebSite(id: number) {
+    this._router.navigate(['/web-sites/id/' + id], { replaceUrl: true });
+  }
 }
