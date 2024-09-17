@@ -14,7 +14,7 @@ import { IonicModule } from '@ionic/angular';
 export class MenuComponent implements OnInit {
   public appPages = [
     { title: 'Home', url: '/home', icon: 'mail' },
-    { title: 'Web sites', url: '/folder/outbox', icon: 'paper-plane' },
+    { title: 'Web sites', url: '/web-sites', icon: 'paper-plane' },
     { title: 'Unity', url: '/folder/favorites', icon: 'heart' },
     { title: 'Apps', url: '/folder/archived', icon: 'archive' },
     { title: 'Contact', url: '/folder/spam', icon: 'warning' },

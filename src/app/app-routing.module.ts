@@ -17,6 +17,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/home/home.module').then((m) => m.HomePageModule),
   },
+  {
+    path: 'web-sites',
+    loadChildren: () =>
+      import('./pages/web-page-info/web-page-info.module').then(
+        (m) => m.WebPageInfoPageModule
+      ),
+  },
 ];
 
 @NgModule({
