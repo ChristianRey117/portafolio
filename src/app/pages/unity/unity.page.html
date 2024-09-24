@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title> Unity</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="grid">
+    <div class="row">
+      <ng-container *ngFor="let card of cards">
+        <div class="col-auto">
+          <app-card [cardWebSite]="card"></app-card>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</ion-content>
