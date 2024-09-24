@@ -17,7 +17,7 @@ export class MenuComponent implements OnInit {
     { title: 'Web sites', url: '/web-sites', icon: 'paper-plane' },
     { title: 'Unity', url: '/unity', icon: 'heart' },
     { title: 'Apps', url: '/apps', icon: 'archive' },
-    { title: 'Contact', url: '/folder/spam', icon: 'warning' },
+    { title: 'Contact', url: '/contact', icon: 'warning' },
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}
