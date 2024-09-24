@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { UnityPage } from './pages/unity/unity.page';
 
 const routes: Routes = [
   {
@@ -23,6 +24,15 @@ const routes: Routes = [
       import('./pages/web-page-info/web-page-info.module').then(
         (m) => m.WebPageInfoPageModule
       ),
+  },
+  {
+    path: 'unity',
+    loadChildren: () =>
+      import('./pages/unity/unity.module').then((m) => m.UnityPageModule),
+  },
+  {
+    path: 'apps',
+    loadChildren: () => import('./pages/apps/apps.module').then( m => m.AppsPageModule)
   },
 ];
 

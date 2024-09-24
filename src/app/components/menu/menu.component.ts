@@ -15,8 +15,8 @@ export class MenuComponent implements OnInit {
   public appPages = [
     { title: 'Home', url: '/home', icon: 'mail' },
     { title: 'Web sites', url: '/web-sites', icon: 'paper-plane' },
-    { title: 'Unity', url: '/folder/favorites', icon: 'heart' },
-    { title: 'Apps', url: '/folder/archived', icon: 'archive' },
+    { title: 'Unity', url: '/unity', icon: 'heart' },
+    { title: 'Apps', url: '/apps', icon: 'archive' },
     { title: 'Contact', url: '/folder/spam', icon: 'warning' },
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
