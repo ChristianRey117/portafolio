@@ -19,7 +19,7 @@ const routes: Routes = [
       import('./pages/home/home.module').then((m) => m.HomePageModule),
   },
   {
-    path: 'web-sites',
+    path: 'proyect',
     loadChildren: () =>
       import('./pages/web-page-info/web-page-info.module').then(
         (m) => m.WebPageInfoPageModule
@@ -32,11 +32,13 @@ const routes: Routes = [
   },
   {
     path: 'apps',
-    loadChildren: () => import('./pages/apps/apps.module').then( m => m.AppsPageModule)
+    loadChildren: () =>
+      import('./pages/apps/apps.module').then((m) => m.AppsPageModule),
   },
   {
     path: 'contact',
-    loadChildren: () => import('./pages/contact/contact.module').then( m => m.ContactPageModule)
+    loadChildren: () =>
+      import('./pages/contact/contact.module').then((m) => m.ContactPageModule),
   },
 ];
 
