@@ -4,4 +4,5 @@ export interface ICardWebSite {
   title: string;
   subtitle: string;
   summary: string;
+  imagesProyect?: string[];
 }

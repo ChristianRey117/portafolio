@@ -19,6 +19,11 @@ export class CardComponent implements OnInit {
   ngOnInit() {}
 
   goToWebSite(id: number) {
-    this._router.navigate(['/proyect/id/' + id], { replaceUrl: true });
+    this._router.navigate(['/proyect/id/' + id], {
+      replaceUrl: true,
+      state: {
+        proyectInfo: this.cardWebSite,
+      },
+    });
   }
 }
