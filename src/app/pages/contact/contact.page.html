@@ -10,11 +10,56 @@
 <ion-content>
   <div class="grid">
     <div class="row">
-      <!-- <ng-container *ngFor="let card of cards">
-        <div class="col-auto">
-          <app-card [cardWebSite]="card"></app-card>
+      <div class="col-12 p-5">
+        <h1>Contact me for work.</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <h3>Please complete this form for more information.</h3>
+    </div>
+    <div class="row justify-content-center">
+      <div class="card" style="width: auto">
+        <div class="card-body">
+          <form style="max-width: 45rem">
+            <div class="col-12 p-3">
+              <ion-item>
+                <ion-input
+                  label="Name"
+                  labelPlacement="floating"
+                  placeholder="Enter your name"
+                ></ion-input>
+              </ion-item>
+            </div>
+
+            <div class="col-12 p-3">
+              <ion-item>
+                <ion-input
+                  label="Email"
+                  labelPlacement="floating"
+                  placeholder="Enter your email"
+                  type="email"
+                ></ion-input>
+              </ion-item>
+            </div>
+
+            <div class="col-12 p-3">
+              <ion-item>
+                <ion-textarea
+                  label="What can I do for you?"
+                  labelPlacement="floating"
+                  [autoGrow]="true"
+                  placeholder="What can I do for you?"
+                ></ion-textarea>
+              </ion-item>
+            </div>
+
+            <div class="col-12 p-4">
+              <ion-button style="width: 100%; height: 3rem">Send</ion-button>
+            </div>
+          </form>
         </div>
-      </ng-container> -->
+      </div>
     </div>
   </div>
 </ion-content>
