@@ -8,6 +8,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 
 import { HomePage } from './home.page';
 import { MenuComponent } from 'src/app/components/menu/menu.component';
+import { CardModule } from 'primeng/card';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { MenuComponent } from 'src/app/components/menu/menu.component';
     IonicModule,
     HomePageRoutingModule,
     MenuComponent,
+    CardModule,
   ],
   declarations: [HomePage],
 })
