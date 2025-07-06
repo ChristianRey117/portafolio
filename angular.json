@@ -31,14 +31,12 @@
                 "output": "./svg"
               }
             ],
-            "styles": ["src/global.scss", "src/theme/variables.scss", "node_modules/bootstrap/dist/css/bootstrap.min.css"],
-            "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-
-              "node_modules/@popperjs/core/dist/umd/popper.min.js",
-
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ]
+            "styles": [
+              "src/global.scss",
+              "src/theme/variables.scss",
+              "./node_modules/primeflex/primeflex.css"
+            ],
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -117,14 +115,12 @@
                 "output": "./svg"
               }
             ],
-            "styles": ["src/global.scss", "src/theme/variables.scss", "node_modules/bootstrap/dist/css/bootstrap.min.css"],
-            "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-
-              "node_modules/@popperjs/core/dist/umd/popper.min.js",
-
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ]
+            "styles": [
+              "src/global.scss",
+              "src/theme/variables.scss",
+              "./node_modules/primeflex/primeflex.css"
+            ],
+            "scripts": []
           },
           "configurations": {
             "ci": {
@@ -136,19 +132,14 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "src/**/*.ts",
-              "src/**/*.html"
-            ]
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
         }
       }
     }
   },
   "cli": {
-    "schematicCollections": [
-      "@ionic/angular-toolkit"
-    ]
+    "schematicCollections": ["@ionic/angular-toolkit"]
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {
