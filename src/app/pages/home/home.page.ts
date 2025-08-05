@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import {
+  categories,
+  experiences,
+  projects,
+  skills,
+} from 'src/app/constantes/data-home';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +20,12 @@ export class HomePage implements OnInit {
     { title: 'Contact', url: '/folder/spam', icon: 'warning' },
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+
+  skills = skills;
+  experiences = experiences;
+  projects = projects;
+  categories = categories;
+
   constructor() {}
 
   ngOnInit() {}

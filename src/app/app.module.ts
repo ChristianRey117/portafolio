@@ -10,6 +10,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeng/themes/aura';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +19,7 @@ import Aura from '@primeng/themes/aura';
     IonicModule.forRoot(),
     AppRoutingModule,
     MenuComponent,
+    HeaderComponent,
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },

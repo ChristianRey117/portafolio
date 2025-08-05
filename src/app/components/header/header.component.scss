@@ -1,0 +1,113 @@
+$gray-100: #f3f4f6;
+$gray-300: #d1d5db;
+$gray-900: #111827;
+$black-10: rgba(0, 0, 0, 0.2);
+$white-10: rgba(255, 255, 255, 0.1);
+$cyan-400: #22d3ee;
+$cyan-500: #06b6d4;
+$purple-400: #c084fc;
+$purple-500: #a855f7;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: $gray-900;
+  color: $gray-100;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.2); /* bg-black/20 */
+  backdrop-filter: blur(16px); /* backdrop-blur-lg */
+  border-bottom: 1px solid $white-10; /* border-b border-white/10 */
+}
+
+.container {
+  max-width: 1280px; /* max-w-7xl */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem; /* sm:px-6 */
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem; /* lg:px-8 */
+    padding-right: 2rem;
+  }
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between; /* justify-between */
+  align-items: center; /* items-center */
+  padding-top: 1rem; /* py-4 */
+  padding-bottom: 1rem;
+}
+
+.logo {
+  background-image: linear-gradient(to right, #22d3ee, #c084fc);
+
+  /* Recorta el fondo para que solo se vea a través del texto */
+  -webkit-background-clip: text; /* Para navegadores basados en WebKit (Chrome, Safari, Edge, etc.) */
+  background-clip: text;
+
+  /* Hace el texto transparente para que el fondo sea visible */
+  -webkit-text-fill-color: transparent; /* Para navegadores basados en WebKit */
+  color: transparent; /* Para otros navegadores (aunque -webkit-text-fill-color es el más crucial) */
+
+  /* Opcional: Asegúrate de que el texto tenga suficiente peso/tamaño para que el efecto se note */
+  font-size: 2.5rem; /* Por ejemplo, un tamaño de fuente grande */
+  font-weight: bold; /* Opcional: Negrita para que sea más visible */
+}
+
+.nav-links {
+  display: none; /* hidden */
+  gap: 2rem; /* space-x-8 */
+}
+
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex; /* md:flex */
+  }
+}
+
+.nav-link {
+  padding: 0.5rem 1rem; /* px-4 py-2 */
+  border-radius: 9999px; /* rounded-full */
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(
+    0.4,
+    0,
+    0.2,
+    1
+  ); /* transition-all duration-300 */
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: $gray-300; /* text-gray-300 */
+}
+
+.nav-link:hover {
+  color: white; /* hover:text-white */
+  background-color: rgba(255, 255, 255, 0.1); /* hover:bg-white/10 */
+}
+
+.nav-link.active {
+  background-image: linear-gradient(to right, var($cyan-500), var($purple-500));
+  color: white; /* text-white */
+}
