@@ -9,6 +9,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { HomePage } from './home.page';
 import { MenuComponent } from 'src/app/components/menu/menu.component';
 import { CardModule } from 'primeng/card';
+import { HeroSectionComponent } from 'src/app/components/hero-section/hero-section.component';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { CardModule } from 'primeng/card';
     HomePageRoutingModule,
     MenuComponent,
     CardModule,
+    HeroSectionComponent,
   ],
   declarations: [HomePage],
 })
