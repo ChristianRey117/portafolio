@@ -1,0 +1,146 @@
+.gradient-text {
+  background: linear-gradient(135deg, #22d3ee, #a855f7);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+// Skill cards with dark theme
+::ng-deep .skill-card {
+  background: linear-gradient(
+    135deg,
+    rgba(31, 41, 55, 0.5),
+    rgba(17, 24, 39, 0.5)
+  ) !important;
+  border: 1px solid #374151;
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+
+  .p-card-header {
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .p-card-body {
+    padding: 0;
+  }
+
+  .p-card-content {
+    padding: 0;
+  }
+}
+
+// Icon containers with gradients
+.icon-container {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.languages-icon {
+    background: linear-gradient(135deg, #10b981, #3b82f6);
+  }
+
+  &.technical-icon {
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  }
+
+  &.soft-icon {
+    background: linear-gradient(135deg, #06b6d4, #3b82f6);
+  }
+}
+
+// Progress bar customization
+::ng-deep .skill-progress {
+  height: 8px;
+  background-color: #374151;
+  border-radius: 4px;
+
+  .p-progressbar-value {
+    border-radius: 4px;
+    transition: width 1s ease-out;
+  }
+
+  &.progress-yellow-orange .p-progressbar-value {
+    background: linear-gradient(90deg, #fbbf24, #f97316);
+  }
+
+  &.progress-blue .p-progressbar-value {
+    background: linear-gradient(90deg, #60a5fa, #2563eb);
+  }
+
+  &.progress-green-blue .p-progressbar-value {
+    background: linear-gradient(90deg, #34d399, #3b82f6);
+  }
+
+  &.progress-red-orange .p-progressbar-value {
+    background: linear-gradient(90deg, #f87171, #f97316);
+  }
+
+  &.progress-purple-pink .p-progressbar-value {
+    background: linear-gradient(90deg, #a78bfa, #ec4899);
+  }
+
+  &.progress-default .p-progressbar-value {
+    background: linear-gradient(90deg, #22d3ee, #a855f7);
+  }
+}
+
+// Technical skill items
+.skill-item {
+  background: rgba(31, 41, 55, 0.5);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(55, 65, 81, 0.5);
+  }
+}
+
+// Soft skill chips
+::ng-deep .soft-skill-chip {
+  background: linear-gradient(135deg, #374151, #1f2937) !important;
+  color: #d1d5db !important;
+  border: none;
+  transition: all 0.3s ease;
+  cursor: default;
+
+  &:hover {
+    background: linear-gradient(135deg, #0891b2, #8b5cf6);
+    color: white;
+  }
+
+  .p-chip-text {
+    color: inherit;
+    font-weight: 500;
+  }
+}
+
+// Color utilities for stars and text
+.text-cyan-400 {
+  color: #22d3ee;
+}
+
+.text-yellow-400 {
+  color: #fbbf24;
+}
+
+.text-gray-600 {
+  color: #6b7280;
+}
+
+.text-color {
+  color: #d1d5db !important;
+}
+
+.text-color-secondary-skill {
+  color: #bdc2cb;
+}
+
+// Height utility
+.h-full {
+  height: 100%;
+}

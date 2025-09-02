@@ -10,6 +10,7 @@ import { HomePage } from './home.page';
 import { MenuComponent } from 'src/app/components/menu/menu.component';
 import { CardModule } from 'primeng/card';
 import { HeroSectionComponent } from 'src/app/components/hero-section/hero-section.component';
+import { SkillsSectionComponent } from 'src/app/components/skills-section/skills-section.component';
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { HeroSectionComponent } from 'src/app/components/hero-section/hero-secti
     MenuComponent,
     CardModule,
     HeroSectionComponent,
+    SkillsSectionComponent,
   ],
   declarations: [HomePage],
 })
