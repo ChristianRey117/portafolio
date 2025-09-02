@@ -1,0 +1,67 @@
+$gray-300: #d1d5db;
+$gray-400: #9ca3af;
+$gray-600: #4b5563;
+$gray-700: #374151;
+$gray-800: #1f2937;
+$gray-900: #111827;
+$cyan-400: #22d3ee;
+$cyan-500: #06b6d4;
+$purple-400: #c084fc;
+$purple-500: #a855f7;
+$pink-400: #f472b6;
+
+:host::ng-deep {
+  p-button.bg-gradient-primary {
+    button {
+      background-image: linear-gradient(to right, $cyan-500, $purple-500);
+      &:hover {
+        background-image: linear-gradient(
+          to right,
+          #0891b2,
+          #9333ea
+        ) !important;
+        border: #06b6d4 !important;
+      }
+    }
+  }
+}
+
+// Estilos de degradado para texto
+.text-gradient-main {
+  background-image: linear-gradient(
+    to right,
+    $cyan-400,
+    $purple-400,
+    $pink-400
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+// Estilos de fuente y tamaño para responsividad
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+@media (min-width: 1024px) {
+  .text-7xl {
+    font-size: 4.5rem;
+  }
+}
+
+// Estilos para el texto de la descripción
+.line-height-2 {
+  line-height: 2;
+}
+
+// Estilos para la imagen de perfil
+.image-bg-blur {
+  background-image: linear-gradient(
+    to right,
+    rgba(6, 182, 212, 0.2),
+    rgba(168, 85, 247, 0.2)
+  );
+  filter: blur(3rem);
+}
