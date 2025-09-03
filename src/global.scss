@@ -43,3 +43,56 @@ ion-menu-button {
 ion-content {
   --background: linear-gradient(to bottom right, #0f172a, #581c87, #0f172a);
 }
+
+.gradient-text {
+  background: linear-gradient(135deg, #22d3ee, #a855f7);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.background-transparent {
+  .p-card {
+    background-color: transparent !important;
+  }
+}
+
+.p-card-project {
+  background: linear-gradient(
+    135deg,
+    rgba(31, 41, 55, 0.5),
+    rgba(17, 24, 39, 0.5)
+  ) !important;
+  border: 1px solid #374151;
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+}
+
+.button-action {
+  button {
+    background-color: rgba(31, 41, 55, 0.5); /* bg-gray-800/50 */
+    color: #d1d5db; /* text-gray-300 */
+    border: 1px solid #374151; /* border border-gray-700 */
+  }
+
+  button:hover {
+    background: linear-gradient(to right, #06b6d4, #a855f7) !important;
+    color: #ffffff; /* hover:text-white */
+  }
+}
+
+p-badge.p-badge-card {
+  span {
+    background: #f1f5f91c !important;
+  }
+}
+
+p-badge.p-badge-outline-cyan {
+  span {
+    background-color: transparent;
+    border: 1px solid #22d3ee; /* border-cyan-400 */
+    color: #22d3ee; /* text-cyan-400 */
+    border-radius: 9999px; /* Para un estilo de "pill" si lo deseas */
+  }
+}
