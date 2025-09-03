@@ -1,0 +1,163 @@
+/* Variables CSS */
+:root {
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+  --cyan-400: #22d3ee;
+  --cyan-500: #06b6d4;
+  --purple-400: #c084fc;
+  --purple-500: #a855f7;
+  --green-400: #4ade80;
+  --blue-400: #60a5fa;
+  --yellow-400: #facc15;
+  --orange-400: #fb923c;
+  --pink-400: #f472b6;
+  --red-400: #ef4444;
+}
+
+/* Estilos de utilidad */
+.py-5rem {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.max-w-7xl {
+  max-width: 1280px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-5rem {
+  margin-bottom: 5rem;
+}
+
+.line-height-1-half {
+  line-height: 1.5;
+}
+
+.line-height-2 {
+  line-height: 2;
+}
+
+.text-gradient-title {
+  background-image: linear-gradient(to right, #a18eee, #60a5fa);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-web {
+  background-image: linear-gradient(to right, #4ade80, #60a5fa);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-mobile {
+  background-image: linear-gradient(to right, #facc15, #fb923c);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-tech {
+  background-image: linear-gradient(to right, #f472b6, #ef4444);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Clases personalizadas de degradado para botones y tarjetas */
+.bg-gradient-primary {
+  background-image: linear-gradient(
+    to right,
+    var(--cyan-500),
+    var(--purple-500)
+  );
+}
+
+.bg-gradient-secondary {
+  background-image: linear-gradient(
+    to right,
+    var(--purple-500),
+    var(--pink-400)
+  );
+  &:hover {
+    background-image: linear-gradient(to right, #9333ea, #ec4899);
+  }
+}
+
+/* Estilos de los componentes de PrimeNG */
+.p-card.p-card-project {
+  border-radius: 1rem;
+}
+
+.p-card.p-card-project .p-card-content {
+  padding: 1.5rem;
+}
+
+.p-button-secondary {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  border: 0;
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.p-badge-outline.p-badge-pill {
+  border-radius: 9999px;
+  background-color: transparent;
+  padding: 0.25rem 0.75rem;
+}
+
+.p-badge-secondary.p-badge-pill {
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+}
+
+.p-button.w-full {
+  width: 100%;
+}
+
+.group-hover\:text-cyan-400:hover {
+  color: var(--cyan-400);
+}
+.group-hover\:text-purple-400:hover {
+  color: var(--purple-400);
+}
+
+:host::ng-deep {
+  .project-stats-card {
+    .p-card-body {
+      background-color: #1f29377d; /* bg-gray-800 */
+      border-radius: 1rem; /* rounded-2xl */
+      border: 1px solid #374151; /* border border-gray-700 */
+    }
+  }
+
+  .p-button-gradient {
+    button {
+      flex: 1; /* flex-1 */
+      background-image: linear-gradient(
+        to right,
+        #a855f7,
+        #ec4899
+      ); /* from-purple-500 to-pink-500 */
+    }
+
+    button:hover {
+      background-image: linear-gradient(
+        to right,
+        #9333ea,
+        #db2777
+      ); /* hover:from-purple-600 hover:to-pink-600 */
+    }
+  }
+}

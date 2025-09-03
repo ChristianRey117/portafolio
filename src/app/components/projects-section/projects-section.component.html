@@ -1,0 +1,234 @@
+<section class="py-5rem px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-5rem">
+      <h2 class="text-4xl font-bold mb-4 gradient-text">Featured Projects</h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+        A showcase of my recent work and personal projects that demonstrate my
+        skills and passion for development
+      </p>
+    </div>
+
+    <div class="flex flex-wrap justify-content-center gap-4 mb-5rem">
+      <p-button
+        *ngFor="let category of categories"
+        (click)="selectedCategory = category"
+        [label]="category"
+        class="button-action"
+        [styleClass]="'p-button-rounded transition-all duration-300 '"
+      ></p-button>
+    </div>
+
+    <div class="mb-5rem">
+      <h3 class="text-2xl font-bold text-white mb-4 flex align-items-center">
+        <i class="pi pi-bolt text-yellow-400 mr-2 text-xl"></i>
+        Featured Projects
+      </h3>
+      <div class="grid">
+        <div class="col-6" *ngFor="let project of featuredProjects">
+          <p-card
+            class="p-card-project"
+            [styleClass]="
+              'p-card-project group bg-gray-800/50 to-gray-900/50 border-gray-700 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 overflow-hidden'
+            "
+          >
+            <div class="relative overflow-hidden">
+              <img
+                [src]="project.image || '/placeholder.svg'"
+                [alt]="project.title"
+                class="w-full h-16rem object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gray-900/80 transition-opacity duration-300 opacity-0 group-hover:opacity-100 p-3 flex flex-column justify-content-end"
+              >
+                <div class="flex gap-3">
+                  <a
+                    [href]="project.github"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <p-button
+                      label="Code"
+                      styleClass="p-button-sm p-button-secondary bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border-0"
+                    >
+                      <i class="pi pi-github mr-2"></i>
+                    </p-button>
+                  </a>
+                  <a
+                    [href]="project.demo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <p-button
+                      label="Demo"
+                      styleClass="p-button-sm p-button-secondary bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border-0"
+                    >
+                      <i class="pi pi-link mr-2"></i>
+                    </p-button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="p-card-content p-4">
+              <div class="flex align-items-center justify-content-between mb-3">
+                <p-badge
+                  [value]="project.category"
+                  class="p-badge-outline-cyan"
+                  styleClass="p-badge-outline-cyan border-cyan-400 text-cyan-400"
+                ></p-badge>
+                <div class="flex align-items-center text-gray-400 text-sm">
+                  <i class="pi pi-calendar mr-1 text-xs"></i>
+                  {{ project.date }}
+                </div>
+              </div>
+              <h3
+                class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300"
+              >
+                {{ project.title }}
+              </h3>
+              <p class="text-gray-300 mb-4 line-height-2">
+                {{ project.description }}
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <p-badge
+                  *ngFor="let tech of project.technologies"
+                  [value]="tech"
+                  class="p-badge-card"
+                  styleClass="p-badge-secondary bg-gray-700/50 text-gray-300 hover:bg-cyan-600/20 hover:text-cyan-300 transition-all-300"
+                ></p-badge>
+              </div>
+            </div>
+          </p-card>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="text-2xl font-bold text-white mb-4 flex align-items-center">
+        <i class="pi pi-folder text-purple-400 mr-2 text-xl"></i>
+        All Projects
+      </h3>
+      <div class="grid">
+        <div class="col-4" *ngFor="let project of filteredProjects">
+          <p-card
+            [styleClass]="
+              'p-card-project group bg-gray-800/30 to-gray-900/30 border-gray-700 backdrop-blur-sm hover:border-purple-500/50 transition-all-300 hover:transform hover:scale-105'
+            "
+          >
+            <div class="relative overflow-hidden">
+              <img
+                [src]="project.image || '/placeholder.svg'"
+                [alt]="project.title"
+                class="w-full h-12rem object-cover"
+              />
+              <div class="absolute top-3 right-3">
+                <p-badge
+                  *ngIf="project.featured"
+                  value="Featured"
+                  styleClass="p-badge-featured bg-gradient-to-r from-yellow-500 to-orange-500 text-white"
+                >
+                  <i class="pi pi-star-fill text-xs mr-1"></i>
+                </p-badge>
+              </div>
+            </div>
+            <div class="p-card-content p-4">
+              <div class="flex align-items-center justify-content-between mb-2">
+                <p-badge
+                  [value]="project.category"
+                  class="p-badge-outline-cyan"
+                  styleClass="p-badge-outline border-purple-400 text-purple-400 text-xs"
+                ></p-badge>
+                <span class="text-gray-400 text-sm">{{ project.date }}</span>
+              </div>
+              <h3
+                class="text-lg font-bold text-white mb-2 group-hover:text-purple-400 transition-colors-300"
+              >
+                {{ project.title }}
+              </h3>
+              <p class="text-gray-400 text-sm mb-4 line-height-1-half">
+                {{ project.description }}
+              </p>
+              <div class="flex flex-wrap gap-1 mb-4">
+                <p-badge
+                  *ngFor="let tech of project.technologies.slice(0, 3)"
+                  [value]="tech"
+                  class="p-badge-card"
+                  styleClass="p-badge-secondary bg-gray-700/30 text-gray-400 text-xs"
+                ></p-badge>
+                <p-badge
+                  *ngIf="project.technologies.length > 3"
+                  [value]="'+' + (project.technologies.length - 3)"
+                  class="p-badge-card"
+                  styleClass="p-badge-secondary bg-gray-700/30 text-gray-400 text-xs"
+                ></p-badge>
+              </div>
+              <div class="flex gap-2">
+                <a
+                  [href]="project.github"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex-1"
+                >
+                  <p-button
+                    label="Code"
+                    styleClass="p-button-outlined border-gray-600 text-gray-300 hover:border-purple-400 hover:text-purple-400 bg-transparent flex-1 w-full"
+                  >
+                    <i class="pi pi-github mr-1 text-sm"></i>
+                  </p-button>
+                </a>
+                <a
+                  [href]="project.demo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex-1"
+                >
+                  <p-button
+                    label="Demo"
+                    class="p-button-gradient"
+                    styleClass="p-button-sm bg-gradient-secondary text-white flex-1 w-full"
+                  >
+                    <i class="pi pi-eye mr-1 text-sm"></i>
+                  </p-button>
+                </a>
+              </div>
+            </div>
+          </p-card>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-6 grid">
+      <div class="col-12 sm:col-3 px-2 text-center p-6">
+        <p-card class="background-transparent project-stats-card">
+          <div class="text-3xl font-bold text-gradient-title mb-2">
+            {{ getTotalProjects() }}
+          </div>
+          <p class="text-gray-400">Total Projects</p>
+        </p-card>
+      </div>
+      <div class="col-12 sm:col-3 text-center px-2 p-6">
+        <p-card class="background-transparent project-stats-card">
+          <div class="text-3xl font-bold text-gradient-web mb-2">
+            {{ getProjectsByCategory("Web Development") }}
+          </div>
+          <p class="text-gray-400">Web Apps</p>
+        </p-card>
+      </div>
+      <div class="col-12 sm:col-3 text-center px-2 p-6">
+        <p-card class="background-transparent project-stats-card">
+          <div class="text-3xl font-bold text-gradient-mobile mb-2">
+            {{ getProjectsByCategory("Mobile Development") }}
+          </div>
+          <p class="text-gray-400">Mobile Apps</p>
+        </p-card>
+      </div>
+      <div class="col-12 sm:col-3 text-center px-2 p-6">
+        <p-card class="background-transparent project-stats-card">
+          <div class="text-3xl font-bold text-gradient-tech mb-2">
+            {{ getUniqueTechnologies() }}
+          </div>
+          <p class="text-gray-400">Technologies</p>
+        </p-card>
+      </div>
+    </div>
+  </div>
+</section>
