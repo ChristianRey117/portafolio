@@ -12,6 +12,7 @@ import { CardModule } from 'primeng/card';
 import { HeroSectionComponent } from 'src/app/components/hero-section/hero-section.component';
 import { SkillsSectionComponent } from 'src/app/components/skills-section/skills-section.component';
 import { ProjectsSectionComponent } from 'src/app/components/projects-section/projects-section.component';
+import { WorkExperienceComponent } from 'src/app/components/work-experience/work-experience.component';
 
 @NgModule({
   imports: [
@@ -24,6 +25,7 @@ import { ProjectsSectionComponent } from 'src/app/components/projects-section/pr
     HeroSectionComponent,
     SkillsSectionComponent,
     ProjectsSectionComponent,
+    WorkExperienceComponent,
   ],
   declarations: [HomePage],
 })
