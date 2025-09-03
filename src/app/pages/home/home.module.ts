@@ -11,6 +11,7 @@ import { MenuComponent } from 'src/app/components/menu/menu.component';
 import { CardModule } from 'primeng/card';
 import { HeroSectionComponent } from 'src/app/components/hero-section/hero-section.component';
 import { SkillsSectionComponent } from 'src/app/components/skills-section/skills-section.component';
+import { ProjectsSectionComponent } from 'src/app/components/projects-section/projects-section.component';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { SkillsSectionComponent } from 'src/app/components/skills-section/skills
     CardModule,
     HeroSectionComponent,
     SkillsSectionComponent,
+    ProjectsSectionComponent,
   ],
   declarations: [HomePage],
 })
