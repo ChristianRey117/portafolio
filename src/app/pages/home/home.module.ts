@@ -13,6 +13,7 @@ import { HeroSectionComponent } from 'src/app/components/hero-section/hero-secti
 import { SkillsSectionComponent } from 'src/app/components/skills-section/skills-section.component';
 import { ProjectsSectionComponent } from 'src/app/components/projects-section/projects-section.component';
 import { WorkExperienceComponent } from 'src/app/components/work-experience/work-experience.component';
+import { ContactFormComponent } from 'src/app/components/contact-form/contact-form.component';
 
 @NgModule({
   imports: [
@@ -26,6 +27,8 @@ import { WorkExperienceComponent } from 'src/app/components/work-experience/work
     SkillsSectionComponent,
     ProjectsSectionComponent,
     WorkExperienceComponent,
+    ContactFormComponent,
+    ContactFormComponent,
   ],
   declarations: [HomePage],
 })
