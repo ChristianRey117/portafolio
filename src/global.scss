@@ -82,6 +82,15 @@ ion-content {
   }
 }
 
+.button-always-active {
+  button {
+    background-image: linear-gradient(to right, #06b6d4, #a855f7);
+  }
+  button:hover {
+    background-image: linear-gradient(to right, #0891b2, #9333ea) !important;
+  }
+}
+
 p-badge.p-badge-card {
   span {
     background: #f1f5f91c !important;
@@ -95,4 +104,12 @@ p-badge.p-badge-outline-cyan {
     color: #22d3ee; /* text-cyan-400 */
     border-radius: 9999px; /* Para un estilo de "pill" si lo deseas */
   }
+}
+
+.p-inputtext {
+  background: #ffffff00 !important;
+}
+
+textarea {
+  background: #ffffff00 !important;
 }
