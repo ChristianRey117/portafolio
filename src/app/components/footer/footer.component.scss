@@ -1,0 +1,43 @@
+.border-t {
+  border-top-width: 1px;
+}
+.border-gray-800 {
+  border-color: #1f2937;
+}
+
+.max-w-7xl {
+  max-width: 80rem;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-center {
+  text-align: center;
+}
+
+.text-gray-400 {
+  color: #9ca3af;
+}
+
+.flex {
+  display: flex;
+}
+.align-items-center {
+  align-items: center;
+}
+.justify-content-center {
+  justify-content: center;
+}
+
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.heart-icon {
+  color: #ef4444; /* red-500 equivalent */
+  font-size: 1.25rem;
+  display: inline-block;
+  vertical-align: middle;
+}

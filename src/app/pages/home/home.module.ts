@@ -14,6 +14,7 @@ import { SkillsSectionComponent } from 'src/app/components/skills-section/skills
 import { ProjectsSectionComponent } from 'src/app/components/projects-section/projects-section.component';
 import { WorkExperienceComponent } from 'src/app/components/work-experience/work-experience.component';
 import { ContactFormComponent } from 'src/app/components/contact-form/contact-form.component';
+import { FooterComponent } from 'src/app/components/footer/footer.component';
 
 @NgModule({
   imports: [
@@ -29,6 +30,7 @@ import { ContactFormComponent } from 'src/app/components/contact-form/contact-fo
     WorkExperienceComponent,
     ContactFormComponent,
     ContactFormComponent,
+    FooterComponent,
   ],
   declarations: [HomePage],
 })
