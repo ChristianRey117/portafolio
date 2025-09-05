@@ -6,6 +6,6 @@ export default interface Project {
   image: string;
   date: string;
   github: string;
-  demo: string;
+  demo?: string;
   featured: boolean;
 }

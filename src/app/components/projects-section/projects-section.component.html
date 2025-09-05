@@ -53,18 +53,20 @@
                       <i class="pi pi-github mr-2"></i>
                     </p-button>
                   </a>
-                  <a
-                    [href]="project.demo"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <p-button
-                      label="Demo"
-                      styleClass="p-button-sm p-button-secondary bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border-0"
+                  <ng-container *ngIf="project.demo">
+                    <a
+                      [href]="project.demo"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <i class="pi pi-link mr-2"></i>
-                    </p-button>
-                  </a>
+                      <p-button
+                        label="Demo"
+                        styleClass="p-button-sm p-button-secondary bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border-0"
+                      >
+                        <i class="pi pi-link mr-2"></i>
+                      </p-button>
+                    </a>
+                  </ng-container>
                 </div>
               </div>
             </div>
@@ -175,20 +177,23 @@
                     <i class="pi pi-github mr-1 text-sm"></i>
                   </p-button>
                 </a>
-                <a
-                  [href]="project.demo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="flex-1"
-                >
-                  <p-button
-                    label="Demo"
-                    class="p-button-gradient"
-                    styleClass="p-button-sm bg-gradient-secondary text-white flex-1 w-full"
+
+                <ng-container *ngIf="project.demo">
+                  <a
+                    [href]="project.demo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex-1"
                   >
-                    <i class="pi pi-eye mr-1 text-sm"></i>
-                  </p-button>
-                </a>
+                    <p-button
+                      label="Demo"
+                      class="p-button-gradient"
+                      styleClass="p-button-sm bg-gradient-secondary text-white flex-1 w-full"
+                    >
+                      <i class="pi pi-eye mr-1 text-sm"></i>
+                    </p-button>
+                  </a>
+                </ng-container>
               </div>
             </div>
           </p-card>
