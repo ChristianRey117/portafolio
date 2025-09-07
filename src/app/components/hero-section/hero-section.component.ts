@@ -43,4 +43,21 @@ export class HeroSectionComponent implements OnInit {
       this.isVisible = true;
     }, 500);
   }
+
+  goToContact(): void {
+    const element = document.getElementById('contact-info');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  downloadCV(): void {
+    const link = document.createElement('a');
+    link.href = 'assets/cv/cv_christian.pdf';
+    link.download = 'Christian_Reyes_CV.pdf';
+    link.target = '_blank';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
 }

@@ -41,6 +41,7 @@
 
           <div class="flex flex-wrap gap-4">
             <p-button
+              (onClick)="downloadCV()"
               class="bg-gradient-primary"
               styleClass="bg-gradient-primary text-white border-none transition-all-300 transform hover:scale-105"
             >
@@ -63,6 +64,7 @@
               Download CV
             </p-button>
             <p-button
+              (onClick)="goToContact()"
               styleClass="p-button-outlined border-gray-600 text-gray-300 hover:bg-white/10 transition-all-300 transform hover:scale-105"
             >
               <svg
@@ -87,7 +89,8 @@
           <div class="col-12 p-3">
             <div class="flex gap-4">
               <a
-                href="#"
+                href="https://github.com/ChristianRey117"
+                target="_blank"
                 class="text-gray-400 hover:text-cyan-400 transition-all-300 transform hover:scale-110"
               >
                 <svg
@@ -110,7 +113,8 @@
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/christian-reyes-hern%C3%A1ndez-139112207/"
+                target="_blank"
                 class="text-gray-400 hover:text-cyan-400 transition-all-300 transform hover:scale-110"
               >
                 <svg
@@ -132,7 +136,8 @@
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://gmail.com/"
+                target="_blank"
                 class="text-gray-400 hover:text-cyan-400 transition-all-300 transform hover:scale-110"
               >
                 <svg
