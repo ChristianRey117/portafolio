@@ -14,26 +14,26 @@ export class WorkExperienceComponent implements OnInit {
   // Datos de ejemplo para la experiencia laboral
   experiences: Experience[] = [
     {
-      title: 'Full Stack Developer',
+      title: 'Custom Software Engineer',
       company: 'Accenture',
-      period: 'Sept 2023 - Feb 2024',
-      technologies: ['Angular', 'TypeScript', 'Node.js', 'Spring Boot', 'SQL'],
+      period: 'Mar 2023 - Present',
+      technologies: ['Angular', 'TypeScript', 'Node.js', 'React', 'SQL'],
       achievements: [
-        'Desarrollo y mantenimiento de microservicios robustos en Java Spring Boot.',
-        'Creación de interfaces de usuario interactivas y reactivas con Angular 15 y TypeScript.',
-        'Implementación de pruebas unitarias y de integración para asegurar la calidad del código.',
-        'Colaboración en un equipo ágil utilizando metodologías Scrum.',
+        'Implemented new critical workflows in the application, optimizing processes by 20% and reducing response times.',
+        'Designed and implemented an intuitive user interface that increased user satisfaction by 18%, according to feedback surveys.',
+        'Developed and implemented a demo version without backend requests for new users.',
+        'Technologies used: Angular, Ionic, PrimeNg, RXJS, Cordova, agile methodologies (Scrum).',
       ],
     },
     {
-      title: 'Front-end Developer',
-      company: 'Innovatech Solutions',
-      period: 'Feb 2023 - Sept 2023',
-      technologies: ['React', 'JavaScript', 'Tailwind CSS', 'Figma'],
+      title: 'InternShip Frontend Developer',
+      company: 'Accenture',
+      period: 'Sep 2022 - Mar 2023',
+      technologies: ['Angular', 'TypeScript', 'Primeng', 'Rxjs', 'Figma'],
       achievements: [
-        'Diseño y maquetación de componentes web con React y Tailwind CSS.',
-        'Optimización del rendimiento de la aplicación web, reduciendo los tiempos de carga en un 20%.',
-        'Colaboración con el equipo de diseño para convertir mockups de Figma en interfaces funcionales.',
+        'Design and layout of web components with Angular and Primeng.',
+        'Optimized web application performance, reducing loading times by 20%.',
+        'Collaboration with the design team to transform Figma mockups into functional interfaces.',
       ],
     },
   ];
