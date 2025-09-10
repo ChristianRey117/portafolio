@@ -82,21 +82,23 @@
               *ngFor="let skill of skills.technical"
               class="flex align-items-center justify-content-between p-3 skill-item mb-3"
             >
-              <div class="flex align-items-center">
-                <span class="text-2xl mr-3">{{ skill.icon }}</span>
-                <span class="text-color font-medium">{{ skill.name }}</span>
-              </div>
-              <div class="flex align-items-center">
-                <div class="flex mr-2">
-                  <i
-                    *ngFor="let star of getStarArray(skill.level)"
-                    class="pi pi-star-fill text-yellow-400 mr-1"
-                    [class.text-gray-600]="star === 0"
-                    [class.text-yellow-400]="star === 1"
-                  >
-                  </i>
+              <div class="grid">
+                <div class="flex align-items-center col-12 md:col-4 w-auto">
+                  <span class="text-2xl mr-3">{{ skill.icon }}</span>
+                  <span class="text-color font-medium">{{ skill.name }}</span>
                 </div>
-                <span class="text-cyan-400 text-sm">{{ skill.level }}%</span>
+                <div class="flex align-items-center col-12 md:col-8 w-auto">
+                  <div class="flex mr-2">
+                    <i
+                      *ngFor="let star of getStarArray(skill.level)"
+                      class="pi pi-star-fill text-yellow-400 mr-1"
+                      [class.text-gray-600]="star === 0"
+                      [class.text-yellow-400]="star === 1"
+                    >
+                    </i>
+                  </div>
+                  <span class="text-cyan-400 text-sm">{{ skill.level }}%</span>
+                </div>
               </div>
             </div>
           </div>

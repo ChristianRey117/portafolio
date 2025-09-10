@@ -15,7 +15,7 @@
     <div class="space-y-8 grid">
       <div
         *ngFor="let exp of experiences; let index = index"
-        class="col-12 group p-8 rounded-2xl border transition-all duration-300 bg-gray-800/50 backdrop-blur-sm border-gray-700 hover:border-cyan-500/50"
+        class="col-12 p-2 sm:p-3 md:p-4 lg:p-8 xl:p-8 group rounded-2xl border transition-all duration-300 bg-gray-800/50 backdrop-blur-sm border-gray-700 hover:border-cyan-500/50"
       >
         <p-card [styleClass]="'p-card-project p-4'">
           <div class="grid">
@@ -58,7 +58,7 @@
               </div>
             </div>
             <div class="col-12 sm:col-12 md:col-12 lg:col-6">
-              <ul class="space-y-4">
+              <ul class="space-y-4 pl-0 sm:pl-0 md:pl-0 lg:pl-6">
                 <li
                   *ngFor="
                     let achievement of exp.achievements;
@@ -66,9 +66,9 @@
                   "
                   class="flex items-start"
                 >
-                  <div
+                  <!-- <div
                     class="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0 bg-gradient-to-r from-cyan-400 to-purple-400"
-                  ></div>
+                  ></div> -->
                   <p class="text-gray-300 leading-relaxed">{{ achievement }}</p>
                 </li>
               </ul>
