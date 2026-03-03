@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
 })
-export class HeaderComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
+export class HeaderComponent {
+  scrollToSection(event: Event, sectionId: string): void {
+    event.preventDefault();
+    const el = document.getElementById(sectionId);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }
