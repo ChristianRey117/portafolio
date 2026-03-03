@@ -1,9 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { CardModule } from 'primeng/card';
-import { BadgeModule } from 'primeng/badge';
-import { ChipModule } from 'primeng/chip';
-import { ButtonModule } from 'primeng/button';
 import Project from 'src/app/interfaces/project/project.interface';
 
 @Component({
@@ -11,7 +7,7 @@ import Project from 'src/app/interfaces/project/project.interface';
   templateUrl: './projects-section.component.html',
   styleUrls: ['./projects-section.component.scss'],
   standalone: true,
-  imports: [CommonModule, CardModule, BadgeModule, ChipModule, ButtonModule],
+  imports: [CommonModule],
 })
 export class ProjectsSectionComponent implements OnInit {
   projects: Project[] = [
