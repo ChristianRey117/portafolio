@@ -1,67 +1,156 @@
-$gray-300: #d1d5db;
-$gray-400: #9ca3af;
-$gray-600: #4b5563;
-$gray-700: #374151;
-$gray-800: #1f2937;
-$gray-900: #111827;
-$cyan-400: #22d3ee;
-$cyan-500: #06b6d4;
-$purple-400: #c084fc;
-$purple-500: #a855f7;
-$pink-400: #f472b6;
-
-:host::ng-deep {
-  p-button.bg-gradient-primary {
-    button {
-      background-image: linear-gradient(to right, $cyan-500, $purple-500);
-      &:hover {
-        background-image: linear-gradient(
-          to right,
-          #0891b2,
-          #9333ea
-        ) !important;
-        border: #06b6d4 !important;
-      }
-    }
-  }
+.hero {
+  padding: 7rem 1.5rem 4rem;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  background: var(--portfolio-navy, #0a192f);
 }
 
-// Estilos de degradado para texto
-.text-gradient-main {
-  background-image: linear-gradient(
-    to right,
-    $cyan-400,
-    $purple-400,
-    $pink-400
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+.hero-container {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
-// Estilos de fuente y tamaño para responsividad
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
+.hero-grid {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
 }
 
 @media (min-width: 1024px) {
-  .text-7xl {
-    font-size: 4.5rem;
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
   }
 }
 
-// Estilos para el texto de la descripción
-.line-height-2 {
-  line-height: 2;
+.hero-welcome {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--portfolio-accent-light, #00b4d8);
+  margin-bottom: 0.75rem;
 }
 
-// Estilos para la imagen de perfil
-.image-bg-blur {
-  background-image: linear-gradient(
-    to right,
-    rgba(6, 182, 212, 0.2),
-    rgba(168, 85, 247, 0.2)
-  );
-  filter: blur(3rem);
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 0.25rem 0;
+  letter-spacing: -0.02em;
+}
+
+.hero-name {
+  color: var(--portfolio-white, #fff);
+  display: block;
+}
+
+.hero-name-accent {
+  color: var(--portfolio-accent, #0077b6);
+  display: block;
+}
+
+.hero-role {
+  font-size: 1.25rem;
+  color: var(--portfolio-text, #e6f1ff);
+  margin: 0 0 1.25rem 0;
+  font-weight: 500;
+}
+
+.hero-description {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--portfolio-text-muted, #8892b0);
+  max-width: 32rem;
+  margin: 0 0 2rem 0;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+:host::ng-deep .hero-btn-primary {
+  button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    background: var(--portfolio-accent, #0077b6) !important;
+    color: var(--portfolio-white) !important;
+    border: none !important;
+    transition: background 0.2s ease, transform 0.15s ease;
+  }
+  button:hover {
+    background: var(--portfolio-accent-light, #00b4d8) !important;
+    transform: translateY(-1px);
+  }
+}
+
+:host::ng-deep .hero-btn-outline {
+  button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    background: transparent !important;
+    color: var(--portfolio-text) !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+  button:hover {
+    border-color: var(--portfolio-accent) !important;
+    background: rgba(0, 119, 182, 0.1) !important;
+  }
+}
+
+.hero-btn-icon {
+  flex-shrink: 0;
+}
+
+.hero-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-social-link {
+  color: var(--portfolio-text-muted);
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.hero-social-link:hover {
+  color: var(--portfolio-accent-light);
+  transform: translateY(-2px);
+}
+
+.hero-image-wrap {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .hero-image-wrap {
+    display: block;
+    justify-self: center;
+  }
+}
+
+.hero-image-frame {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.3);
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
