@@ -9,46 +9,106 @@
         </h1>
         <p class="hero-role">Software Engineer</p>
         <p class="hero-description">
-          Software engineer specializing in modern web development.
-          Proficient in JavaScript frameworks such as Angular and React, as well as TypeScript
-          to write clean and maintainable code. My experience in building web applications
-          allows me to create intuitive and efficient user interfaces.
+          Software engineer specializing in modern web development. Proficient
+          in JavaScript frameworks such as Angular and React, as well as
+          TypeScript to write clean and maintainable code. My experience in
+          building web applications allows me to create intuitive and efficient
+          user interfaces.
         </p>
         <div class="hero-actions">
           <p-button
             (onClick)="downloadCV()"
             styleClass="hero-btn-primary"
+            severity="secondary"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hero-btn-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="hero-btn-icon"
+            >
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
               <polyline points="7 10 12 15 17 10" />
               <line x1="12" x2="12" y1="15" y2="3" />
             </svg>
             Download CV
           </p-button>
-          <p-button
-            (onClick)="goToContact()"
-            styleClass="hero-btn-outline"
-          >
+          <p-button (onClick)="goToContact()" styleClass="hero-btn-outline">
             Contact Me
           </p-button>
         </div>
         <div class="hero-social">
-          <a href="https://github.com/ChristianRey117" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="GitHub">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3-4 3-6.5 3-9.5a5 5 0 0 0-5-5c-2.5 0-5 2-5 5a5 5 0 0 0 3 4.5c-.5.5-1 1.5-1 2v4" />
+          <a
+            href="https://github.com/ChristianRey117"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hero-social-link"
+            aria-label="GitHub"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3-4 3-6.5 3-9.5a5 5 0 0 0-5-5c-2.5 0-5 2-5 5a5 5 0 0 0 3 4.5c-.5.5-1 1.5-1 2v4"
+              />
               <path d="M9 18c-2.5 0-5 .5-5-2s2.5-2 5-2s5 .5 5 2-2.5 2-5 2" />
             </svg>
           </a>
-          <a href="https://www.linkedin.com/in/christian-reyes-hern%C3%A1ndez-139112207/" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+          <a
+            href="https://www.linkedin.com/in/christian-reyes-hern%C3%A1ndez-139112207/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hero-social-link"
+            aria-label="LinkedIn"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+              />
               <rect width="4" height="12" x="2" y="9" />
               <circle cx="4" cy="4" r="2" />
             </svg>
           </a>
-          <a href="mailto:christianreyeshdz117&#64;gmail.com" class="hero-social-link" aria-label="Email">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <a
+            href="mailto:christianreyeshdz117&#64;gmail.com"
+            class="hero-social-link"
+            aria-label="Email"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
               <rect width="20" height="16" x="2" y="4" rx="2" />
               <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
             </svg>
@@ -57,7 +117,11 @@
       </div>
       <div class="hero-image-wrap" [@slideInRight]="isVisible">
         <div class="hero-image-frame">
-          <img src="assets/images/mi_retrato.jpg" alt="Christian Reyes" class="hero-image" />
+          <img
+            src="assets/images/mi_retrato.jpg"
+            alt="Christian Reyes"
+            class="hero-image"
+          />
         </div>
       </div>
     </div>
