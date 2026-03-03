@@ -1,146 +1,156 @@
-.gradient-text {
-  background: linear-gradient(135deg, #22d3ee, #a855f7);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+.skills-section {
+  padding: 4rem 1.5rem;
+  background: var(--portfolio-navy, #0a192f);
 }
 
-// Skill cards with dark theme
-::ng-deep .skill-card {
-  background: linear-gradient(
-    135deg,
-    rgba(31, 41, 55, 0.5),
-    rgba(17, 24, 39, 0.5)
-  ) !important;
-  border: 1px solid #374151;
-  backdrop-filter: blur(8px);
+.skills-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.skills-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.skills-title {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  color: var(--portfolio-text, #e6f1ff);
+  margin: 0;
+}
+
+.skills-title-accent {
+  color: var(--portfolio-accent, #0077b6);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.skills-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.skill-card {
+  background: var(--portfolio-navy-light, #112240);
+  border: 1px solid var(--portfolio-slate, #233554);
   border-radius: 12px;
-
-  .p-card-header {
-    padding: 0;
-    border-bottom: none;
-  }
-
-  .p-card-body {
-    padding: 0;
-  }
-
-  .p-card-content {
-    padding: 0;
-  }
+  padding: 1.5rem;
+  transition: border-color 0.2s ease;
 }
 
-// Icon containers with gradients
-.icon-container {
+.skill-card:hover {
+  border-color: rgba(0, 119, 182, 0.4);
+}
+
+.skill-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.skill-icon {
   width: 48px;
   height: 48px;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  &.languages-icon {
-    background: linear-gradient(135deg, #10b981, #3b82f6);
-  }
-
-  &.technical-icon {
-    background: linear-gradient(135deg, #8b5cf6, #ec4899);
-  }
-
-  &.soft-icon {
-    background: linear-gradient(135deg, #06b6d4, #3b82f6);
-  }
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--portfolio-white);
 }
 
-// Progress bar customization
-::ng-deep .skill-progress {
+.skill-icon-lang {
+  background: linear-gradient(135deg, var(--portfolio-accent), var(--portfolio-accent-light));
+}
+
+.skill-icon-tech {
+  background: linear-gradient(135deg, var(--portfolio-slate), var(--portfolio-accent));
+  font-size: 1rem;
+  font-family: ui-monospace, monospace;
+}
+
+.skill-icon-soft {
+  background: linear-gradient(135deg, var(--portfolio-navy-light), var(--portfolio-accent));
+  font-size: 1.5rem;
+}
+
+.skill-card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--portfolio-text);
+  margin: 0;
+}
+
+.skill-card-body {
+  margin-top: 0.5rem;
+}
+
+.skill-row {
+  margin-bottom: 1rem;
+}
+
+.skill-row:last-child {
+  margin-bottom: 0;
+}
+
+.skill-label {
+  display: block;
+  font-size: 0.9375rem;
+  color: var(--portfolio-text);
+  margin-bottom: 0.35rem;
+}
+
+.skill-progress-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skill-progress-bg {
+  flex: 1;
   height: 8px;
-  background-color: #374151;
+  background: var(--portfolio-slate);
   border-radius: 4px;
-
-  .p-progressbar-value {
-    border-radius: 4px;
-    transition: width 1s ease-out;
-  }
-
-  &.progress-yellow-orange .p-progressbar-value {
-    background: linear-gradient(90deg, #fbbf24, #f97316);
-  }
-
-  &.progress-blue .p-progressbar-value {
-    background: linear-gradient(90deg, #60a5fa, #2563eb);
-  }
-
-  &.progress-green-blue .p-progressbar-value {
-    background: linear-gradient(90deg, #34d399, #3b82f6);
-  }
-
-  &.progress-red-orange .p-progressbar-value {
-    background: linear-gradient(90deg, #f87171, #f97316);
-  }
-
-  &.progress-purple-pink .p-progressbar-value {
-    background: linear-gradient(90deg, #a78bfa, #ec4899);
-  }
-
-  &.progress-default .p-progressbar-value {
-    background: linear-gradient(90deg, #22d3ee, #a855f7);
-  }
+  overflow: hidden;
 }
 
-// Technical skill items
-.skill-item {
-  background: rgba(31, 41, 55, 0.5);
-  border-radius: 8px;
-  transition: all 0.3s ease;
-
-  &:hover {
-    background: rgba(55, 65, 81, 0.5);
-  }
-}
-
-// Soft skill chips
-::ng-deep .soft-skill-chip {
-  background: linear-gradient(135deg, #374151, #1f2937) !important;
-  color: #d1d5db !important;
-  border: none;
-  transition: all 0.3s ease;
-  cursor: default;
-
-  &:hover {
-    background: linear-gradient(135deg, #0891b2, #8b5cf6);
-    color: white;
-  }
-
-  .p-chip-text {
-    color: inherit;
-    font-weight: 500;
-  }
-}
-
-// Color utilities for stars and text
-.text-cyan-400 {
-  color: #22d3ee;
-}
-
-.text-yellow-400 {
-  color: #fbbf24;
-}
-
-.text-gray-600 {
-  color: #6b7280;
-}
-
-.text-color {
-  color: #d1d5db !important;
-}
-
-.text-color-secondary-skill {
-  color: #bdc2cb;
-}
-
-// Height utility
-.h-full {
+.skill-progress-fill {
   height: 100%;
+  background: var(--portfolio-accent);
+  border-radius: 4px;
+  transition: width 0.8s ease-out;
+}
+
+.skill-percent {
+  font-size: 0.8125rem;
+  color: var(--portfolio-accent-light);
+  min-width: 2.5rem;
+  text-align: right;
+}
+
+.skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-chip {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  background: var(--portfolio-slate);
+  color: var(--portfolio-text);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
