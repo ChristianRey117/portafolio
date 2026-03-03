@@ -1,19 +1,107 @@
-:root {
-  --gray-300: #d1d5db;
-  --gray-400: #9ca3af;
-  --gray-600: #4b5563;
-  --gray-700: #374151;
-  --gray-800: #1f2937;
-  --gray-900: #111827;
-  --cyan-400: #22d3ee;
-  --cyan-500: #06b6d4;
-  --purple-400: #c084fc;
-  --purple-500: #a855f7;
+.experience-section {
+  padding: 4rem 1.5rem;
+  background: var(--portfolio-navy, #0a192f);
 }
 
-.text-gradient-title {
-  background-image: linear-gradient(to right, #22d3ee, #a855f7);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+.experience-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.experience-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.experience-title {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  color: var(--portfolio-text, #e6f1ff);
+  margin: 0 0 0.75rem 0;
+}
+
+.experience-title-accent {
+  color: var(--portfolio-accent, #0077b6);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.experience-subtitle {
+  font-size: 1rem;
+  color: var(--portfolio-text-muted);
+  max-width: 36rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.timeline {
+  position: relative;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--portfolio-accent);
+  box-shadow: 0 0 0 4px var(--portfolio-navy), 0 0 0 6px var(--portfolio-accent);
+}
+
+.timeline-line {
+  position: absolute;
+  left: 6px;
+  top: 1.5rem;
+  bottom: -0.5rem;
+  width: 2px;
+  background: var(--portfolio-slate);
+}
+
+.timeline-period {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--portfolio-text);
+  margin: 0 0 0.25rem 0;
+}
+
+.timeline-role {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--portfolio-text);
+  margin: 0 0 0.25rem 0;
+}
+
+.timeline-company {
+  font-size: 0.9375rem;
+  color: var(--portfolio-text-muted);
+  margin: 0 0 0.75rem 0;
+}
+
+.timeline-achievements {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.9375rem;
+  color: var(--portfolio-text-muted);
+  line-height: 1.65;
+}
+
+.timeline-achievement {
+  margin-bottom: 0.35rem;
+}
+
+.timeline-achievement:last-child {
+  margin-bottom: 0;
 }

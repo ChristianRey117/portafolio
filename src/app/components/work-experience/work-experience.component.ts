@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { CardModule } from 'primeng/card';
+import { Component } from '@angular/core';
 import Experience from 'src/app/interfaces/experiences/experiences.interface';
 
 @Component({
@@ -8,9 +7,9 @@ import Experience from 'src/app/interfaces/experiences/experiences.interface';
   templateUrl: './work-experience.component.html',
   styleUrls: ['./work-experience.component.scss'],
   standalone: true,
-  imports: [CommonModule, CardModule],
+  imports: [CommonModule],
 })
-export class WorkExperienceComponent implements OnInit {
+export class WorkExperienceComponent {
   // Datos de ejemplo para la experiencia laboral
   experiences: Experience[] = [
     {
