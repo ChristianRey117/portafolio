@@ -1,9 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
-import { FloatLabelModule } from 'primeng/floatlabel';
 import { ButtonModule } from 'primeng/button';
 
 @Component({
@@ -11,17 +9,18 @@ import { ButtonModule } from 'primeng/button';
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss'],
   standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule,
-    CardModule,
-    InputTextModule,
-    FloatLabelModule,
-    ButtonModule,
-  ],
+  imports: [CommonModule, FormsModule, InputTextModule, ButtonModule],
 })
-export class ContactFormComponent implements OnInit {
-  constructor() {}
+export class ContactFormComponent {
+  name = '';
+  email = '';
+  message = '';
 
-  ngOnInit() {}
+  onSubmit(): void {
+    // Optional: send to backend or mailto
+    if (this.email && this.message) {
+      const mailto = `mailto:christianreyeshdz117&#64;gmail.com?subject=Contact from portfolio&body=${encodeURIComponent(this.message)}`;
+      window.location.href = mailto;
+    }
+  }
 }

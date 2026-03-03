@@ -1,144 +1,75 @@
-<section class="py-20 px-4 sm:px-6 lg:px-8">
-  <div class="max-w-4xl mx-auto grid">
-    <div class="text-center mb-16 col-12">
-      <h2 class="text-4xl font-bold mb-4 text-gradient-title">
-        Let's Work Together
-      </h2>
-      <p class="text-gray-400 text-lg">
-        Ready to bring your ideas to life? Let's discuss your next project.
-      </p>
-    </div>
-
-    <div class="col-12">
-      <p-card styleClass="p-card-project">
-        <div class="p-0 xl:p-8">
-          <form class="space-y-6">
-            <div class="grid">
-              <div class="col-12 sm:col-12 md:col-6">
-                <p-floatlabel>
-                  <input pInputText autocomplete="off" class="w-full" />
-                  <label>Name</label>
-                </p-floatlabel>
-              </div>
-
-              <div class="col-12 sm:col-12 md:col-6">
-                <p-floatlabel>
-                  <input
-                    pInputText
-                    type="email"
-                    autocomplete="off"
-                    class="w-full"
-                  />
-                  <label>Email</label>
-                </p-floatlabel>
-              </div>
+<section class="contact-section" id="contact">
+  <div class="contact-container">
+    <div class="contact-card-wrap">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2 class="contact-title">
+            Let's <span class="contact-title-accent">Connect</span>
+          </h2>
+          <p class="contact-description">
+            I'm always open to discussing new projects and opportunities.
+            Whether you have a question or just want to say hi, feel free to reach out.
+          </p>
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <svg class="contact-detail-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              <a href="mailto:christianreyeshdz117&#64;gmail.com" class="contact-detail-link">christianreyeshdz117&#64;gmail.com</a>
             </div>
-
-            <div class="col-12">
-              <p-floatlabel>
-                <textarea
-                  pTextarea
-                  id="over_label"
-                  rows="7"
-                  cols="30"
-                  style="resize: none"
-                  class="h-full w-full"
-                ></textarea>
-                <label for="over_label">What can I do for you?</label>
-              </p-floatlabel>
+            <div class="contact-detail-item">
+              <svg class="contact-detail-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span class="contact-detail-text">Mexico</span>
             </div>
-
-            <div class="col-12">
-              <p-button
-                icon="pi pi-send"
-                type="submit"
-                styleClass="w-full"
-                class="button-always-active"
-                label="Send Message"
-              >
-              </p-button>
+          </div>
+        </div>
+        <div class="contact-form-wrap">
+          <form class="contact-form" (ngSubmit)="onSubmit()">
+            <div class="contact-field">
+              <input
+                type="text"
+                pInputText
+                id="contact-name"
+                placeholder="Your Name"
+                class="contact-input"
+                [(ngModel)]="name"
+                name="name"
+              />
             </div>
+            <div class="contact-field">
+              <input
+                type="email"
+                pInputText
+                id="contact-email"
+                placeholder="Your Email"
+                class="contact-input"
+                [(ngModel)]="email"
+                name="email"
+              />
+            </div>
+            <div class="contact-field">
+              <textarea
+                id="contact-message"
+                placeholder="Your Message"
+                rows="4"
+                class="contact-input contact-textarea"
+                [(ngModel)]="message"
+                name="message"
+              ></textarea>
+            </div>
+            <p-button
+              type="submit"
+              label="Send Message"
+              icon="pi pi-arrow-right"
+              iconPos="right"
+              styleClass="contact-submit"
+            ></p-button>
           </form>
         </div>
-      </p-card>
-    </div>
-
-    <div class="mt-6 grid" id="contact-info">
-      <div class="col-12 md:col-4">
-        <p-card styleClass="p-card-project">
-          <div
-            class="w-full h-12 rounded-xl flex items-center justify-center mx-auto mb-4 gradient-icon-bg"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="w-6 h-6 text-white"
-            >
-              <path
-                d="M1.5 8.67v8.582a1.5 1.5 0 0 0 .817 1.34L8.75 21.84a2.25 2.25 0 0 0 2.228 0l6.333-3.288a1.5 1.5 0 0 0 .817-1.34V8.67L12 14.502 1.5 8.67ZM19.5 3.14a.75.75 0 0 1 .455.22L22.5 5.25v8.198l-3-1.65v-6.6a1.5 1.5 0 0 0-.817-1.34l-5.385-2.962a1.5 1.5 0 0 0-2.228 0L2.25 4.98v6.6l-3 1.65V5.25l2.545-1.89a.75.75 0 0 1 .455-.22h14.25Z"
-              />
-            </svg>
-          </div>
-          <h3 class="text-white font-medium mb-2">Email</h3>
-          <p class="text-gray-400 my-0">christianreyeshdz117&#64;gmail.com</p>
-        </p-card>
-      </div>
-
-      <div class="col-12 md:col-4">
-        <p-card styleClass="p-card-project">
-          <div
-            class="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4 gradient-icon-bg-2"
-          >
-            <!-- SVG para el ícono de GitHub -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="w-6 h-6 text-white"
-            >
-              <path
-                d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.68-.22.68-.49v-1.78c-2.78.61-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1.01.07 1.54 1.04 1.54 1.04.9 1.54 2.34 1.09 2.91.83.09-.64.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.67-.1-.25-.45-1.26.1-2.62 0 0 .84-.27 2.75 1.02.8-.22 1.65-.33 2.5-.33s1.7.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.36.2 2.37.1 2.62.64.69 1.03 1.58 1.03 2.67 0 3.84-2.34 4.69-4.57 4.94.36.31.68.91.68 1.83v2.72c0 .27.18.57.69.49C19.13 20.17 22 16.42 22 12A10 10 0 0 0 12 2Z"
-              />
-            </svg>
-          </div>
-          <h3 class="text-white font-medium mb-2">GitHub</h3>
-          <a
-            href="https://github.com/ChristianRey117"
-            class="text-gray-400"
-            target="_blank"
-          >
-            ChristianRey117
-          </a>
-        </p-card>
-      </div>
-
-      <div class="col-12 md:col-4">
-        <p-card styleClass="p-card-project">
-          <div
-            class="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4 gradient-icon-bg-3"
-          >
-            <!-- SVG para el ícono de LinkedIn -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="w-6 h-6 text-white"
-            >
-              <path
-                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.765s.784-1.765 1.75-1.765 1.75.79 1.75 1.765-.783 1.765-1.75 1.765zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.764 7 2.358v6.877z"
-              />
-            </svg>
-          </div>
-          <h3 class="text-white font-medium mb-2">LinkedIn</h3>
-          <a
-            href="https://www.linkedin.com/in/christian-reyes-hern%C3%A1ndez-139112207/"
-            target="_blank"
-            class="text-gray-400"
-          >
-            Professional Profile
-          </a>
-        </p-card>
       </div>
     </div>
   </div>

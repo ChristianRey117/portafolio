@@ -1,97 +1,127 @@
-.text-gradient-title {
-  background-image: linear-gradient(to right, #22d3ee, #c084fc);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.contact-section {
+  padding: 4rem 1.5rem;
+  background: var(--portfolio-navy, #0a192f);
 }
 
-.contact-card {
-  background: linear-gradient(
-    to bottom right,
-    rgba(31, 41, 55, 0.5),
-    rgba(17, 24, 39, 0.5)
-  );
-  border-radius: 1.5rem;
-  border: 1px solid #374151;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+.contact-container {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
-.gradient-button {
-  background-image: linear-gradient(to right, #06b6d4, #a855f7);
-  transition: all 0.3s ease;
+.contact-card-wrap {
+  background: var(--portfolio-navy-light, #112240);
+  border: 1px solid var(--portfolio-slate);
+  border-radius: 16px;
+  padding: 2.5rem;
 }
 
-.gradient-button:hover {
-  background-image: linear-gradient(to right, #0891b2, #9333ea);
-  transform: scale(1.05);
+.contact-grid {
+  display: grid;
+  gap: 2.5rem;
 }
 
-.gradient-icon-bg {
-  background-image: linear-gradient(to right, #06b6d4, #a855f7);
-}
-.gradient-icon-bg-2 {
-  background-image: linear-gradient(to right, #22c55e, #3b82f6);
-}
-.gradient-icon-bg-3 {
-  background-image: linear-gradient(to right, #3b82f6, #a855f7);
-}
-
-.contact-info-card {
-  background: linear-gradient(
-    to bottom right,
-    rgba(31, 41, 55, 0.3),
-    rgba(17, 24, 39, 0.3)
-  );
-  border-radius: 1rem;
-  border: 1px solid #374151;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
-
-/* Primeflex responsive classes */
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-.sm\:px-6 {
-  @media (min-width: 640px) {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+@media (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
-.lg\:px-8 {
-  @media (min-width: 1024px) {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-.max-w-4xl {
-  max-width: 56rem;
-}
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-.text-center {
-  text-align: center;
-}
-.mb-16 {
-  margin-bottom: 4rem;
-}
-.space-y-6 > * + * {
-  margin-top: 1.5rem;
+
+.contact-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--portfolio-text);
+  margin: 0 0 1rem 0;
 }
 
-.md\:grid-cols-2 {
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+.contact-title-accent {
+  color: var(--portfolio-accent);
 }
-.gap-6 {
-  gap: 1.5rem;
+
+.contact-description {
+  font-size: 0.9375rem;
+  color: var(--portfolio-text-muted);
+  line-height: 1.65;
+  margin: 0 0 1.5rem 0;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.contact-detail-icon {
+  flex-shrink: 0;
+  color: var(--portfolio-accent);
+}
+
+.contact-detail-link,
+.contact-detail-text {
+  font-size: 0.9375rem;
+  color: var(--portfolio-text);
+}
+
+.contact-detail-link:hover {
+  color: var(--portfolio-accent-light);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact-field {
+  width: 100%;
+}
+
+.contact-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--portfolio-slate);
+  background: var(--portfolio-navy);
+  color: var(--portfolio-text);
+  font-size: 0.9375rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.contact-input::placeholder {
+  color: var(--portfolio-text-muted);
+}
+
+.contact-input:focus {
+  outline: none;
+  border-color: var(--portfolio-accent);
+}
+
+.contact-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+:host::ng-deep .contact-submit {
+  button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    background: var(--portfolio-accent) !important;
+    color: var(--portfolio-white) !important;
+    border: none !important;
+    transition: background 0.2s ease, transform 0.15s ease;
+  }
+  button:hover {
+    background: var(--portfolio-accent-light) !important;
+    transform: translateY(-1px);
+  }
 }
