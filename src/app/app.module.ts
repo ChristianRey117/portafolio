@@ -12,6 +12,8 @@ import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeng/themes/aura';
 import { HeaderComponent } from './components/header/header.component';
 import { definePreset } from '@primeng/themes';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 
 const theme = definePreset(Aura, {
   semantic: {
@@ -48,6 +50,7 @@ const theme = definePreset(Aura, {
     AppRoutingModule,
     MenuComponent,
     HeaderComponent,
+    ToastModule,
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
@@ -58,6 +61,7 @@ const theme = definePreset(Aura, {
         preset: theme,
       },
     }),
+    MessageService,
   ],
   bootstrap: [AppComponent],
 })

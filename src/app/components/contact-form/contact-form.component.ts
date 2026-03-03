@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-contact-form',
@@ -16,11 +17,41 @@ export class ContactFormComponent {
   email = '';
   message = '';
 
-  onSubmit(): void {
-    // Optional: send to backend or mailto
-    if (this.email && this.message) {
-      const mailto = `mailto:christianreyeshdz117&#64;gmail.com?subject=Contact from portfolio&body=${encodeURIComponent(this.message)}`;
-      window.location.href = mailto;
-    }
+  isLoading = false;
+
+  constructor(private _messageService: MessageService) {}
+
+  onSubmit(event: any): void {
+    event.preventDefault();
+    var data = new FormData(event.target);
+    this.isLoading = true;
+    fetch(event.target.action, {
+      method: 'POST',
+      body: data,
+      headers: {
+        Accept: 'application/json',
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          this._messageService.add({
+            severity: 'success',
+            summary: 'Success',
+            detail: 'Message sent successfully',
+            life: 5000,
+          });
+        } else {
+          this._messageService.add({
+            severity: 'error',
+            summary: 'Error',
+            detail: 'Message failed to send',
+            life: 5000,
+          });
+        }
+      })
+      .catch((error) => {})
+      .finally(() => {
+        this.isLoading = false;
+      });
   }
 }
