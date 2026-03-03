@@ -36,16 +36,40 @@
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
 @import "primeicons/primeicons.css";
+
+/* Portfolio theme: navy + bright blue (#0A192F, #0077b6) */
+:root {
+  --portfolio-navy: #0a192f;
+  --portfolio-navy-light: #112240;
+  --portfolio-slate: #233554;
+  --portfolio-accent: #0077b6;
+  --portfolio-accent-light: #00b4d8;
+  --portfolio-text: #e6f1ff;
+  --portfolio-text-muted: #8892b0;
+  --portfolio-white: #ffffff;
+}
+
+body {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--portfolio-navy);
+  color: var(--portfolio-text);
+}
+
 ion-menu-button {
-  color: var(--ion-color-primary);
+  color: var(--portfolio-accent);
 }
 
 ion-content {
-  --background: linear-gradient(to bottom right, #0f172a, #581c87, #0f172a);
+  --background: var(--portfolio-navy);
 }
 
-.gradient-text {
-  background: linear-gradient(135deg, #22d3ee, #a855f7);
+.gradient-text,
+.section-accent {
+  color: var(--portfolio-accent);
+}
+
+.gradient-text-bg {
+  background: linear-gradient(135deg, var(--portfolio-accent-light), var(--portfolio-accent));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -59,57 +83,60 @@ ion-content {
 }
 
 .p-card-project {
-  background: linear-gradient(
-    135deg,
-    rgba(31, 41, 55, 0.5),
-    rgba(17, 24, 39, 0.5)
-  ) !important;
-  border: 1px solid #374151;
+  background: var(--portfolio-navy-light) !important;
+  border: 1px solid var(--portfolio-slate);
   backdrop-filter: blur(8px);
   border-radius: 12px;
 }
 
 .button-action {
   button {
-    background-color: rgba(31, 41, 55, 0.5); /* bg-gray-800/50 */
-    color: #d1d5db; /* text-gray-300 */
-    border: 1px solid #374151; /* border border-gray-700 */
+    background-color: rgba(17, 34, 64, 0.6);
+    color: var(--portfolio-text);
+    border: 1px solid var(--portfolio-slate);
   }
 
   button:hover {
-    background: linear-gradient(to right, #06b6d4, #a855f7) !important;
-    color: #ffffff; /* hover:text-white */
+    background: var(--portfolio-accent) !important;
+    color: var(--portfolio-white);
   }
 }
 
 .button-always-active {
   button {
-    background-image: linear-gradient(to right, #06b6d4, #a855f7);
+    background: var(--portfolio-accent);
+    color: var(--portfolio-white);
   }
   button:hover {
-    background-image: linear-gradient(to right, #0891b2, #9333ea) !important;
+    background: var(--portfolio-accent-light) !important;
   }
 }
 
 p-badge.p-badge-card {
   span {
-    background: #f1f5f91c !important;
+    background: rgba(0, 119, 182, 0.2) !important;
+    color: var(--portfolio-text);
+    border-radius: 9999px;
   }
 }
 
 p-badge.p-badge-outline-cyan {
   span {
     background-color: transparent;
-    border: 1px solid #22d3ee; /* border-cyan-400 */
-    color: #22d3ee; /* text-cyan-400 */
-    border-radius: 9999px; /* Para un estilo de "pill" si lo deseas */
+    border: 1px solid var(--portfolio-accent);
+    color: var(--portfolio-accent-light);
+    border-radius: 9999px;
   }
 }
 
 .p-inputtext {
-  background: #ffffff00 !important;
+  background: var(--portfolio-navy) !important;
+  border: 1px solid var(--portfolio-slate);
+  color: var(--portfolio-text) !important;
 }
 
-textarea {
-  background: #ffffff00 !important;
+textarea.p-inputtext {
+  background: var(--portfolio-navy) !important;
+  border: 1px solid var(--portfolio-slate);
+  color: var(--portfolio-text) !important;
 }
